@@ -121,10 +121,10 @@ class MainModel extends CI_Model {
         $this->load->database();
 		$this->db->select('*');
 		$this->db->from('tbl_gerbang');
-		$this->db->where('status',1);
+		$this->db->where('status','1');
 		$this->db->where('jenis_Gerbang',1);
 		$this->db->or_where('jenis_Gerbang',3);
-		$this->db->where('ruas_id',37);
+		// $this->db->where('ruas_id',40);
 
 		// $this->db->where_in('jenis_gerbang',$jenis_gerbang);	
 
@@ -207,8 +207,6 @@ class MainModel extends CI_Model {
         $this->load->database();
 		$this->db->select('*');
 		$this->db->from('tbl_gerbang');
-		// $this->db->where('status','1');
-		// $this->db->where('ruas_id','37');	
 		$rs = $this->db->get();	  
 		return $rs->result();		
 
