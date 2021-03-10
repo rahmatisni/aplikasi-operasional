@@ -310,6 +310,7 @@ class MainModel extends CI_Model {
 		$this->dbx->from('tbl_tarif_exit');
 		$this->dbx->where('gerbang_id',$db);
 		$this->dbx->not_like('asal_gerbang','99');
+		$this->dbx->order_by('gerbang_id',"ASC");
 
 		$rs = $this->dbx->get();	  
 		return $rs->result();		

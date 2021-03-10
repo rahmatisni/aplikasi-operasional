@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Aplikasi Operasional CSJ</title>
+	<title>Aplikasi Operasional JKC</title>
   <?= $include ?>
 </head>
 <style>

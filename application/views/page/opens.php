@@ -164,7 +164,7 @@ td:hover {
 <div class="col-xs-12">
 <div class="panel panel-default">
 <div class="panel-heading">
-<h1 style="text-align:center";>Daftar Tarif Gerbang Open CSJ</h1>
+<h1 style="text-align:center";>Daftar Tarif Gerbang Open JKC</h1>
 
 <div class="btn-group btn-group-sm pull-right" role="group">
 

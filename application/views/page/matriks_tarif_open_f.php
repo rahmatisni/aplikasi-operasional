@@ -187,7 +187,10 @@ a {
                                 {
                                     foreach ($GerbangOption as $row) 
                                     {
-                                        echo '<option value='.$row->gerbang_id.'>'.ucfirst($row->gerbang_nama).' - ('.$row->jenis_gerbang.')'.'</option>';
+                                        if ($row->jenis_gerbang != '2' && $row->ruas_id == '40') {
+                                    // kode ruas
+                                            echo '<option value='.$row->gerbang_id.'>'.ucfirst($row->gerbang_nama).' - ('.$row->jenis_gerbang.')'.'</option>';
+                                        }
                                     }
                                 } 
                                 else
@@ -238,7 +241,7 @@ a {
                         </table>
                     </div>
                 </div>
-                <h1 style="text-align:center";>Daftar Tarif Gerbang Open CSJ</h1>
+                <h1 style="text-align:center";>Daftar Tarif Gerbang Open JKC</h1>
                 <div class="panel-body">
                     <table id="example" class="display nowrap" style="width:100%">
                         <thead>

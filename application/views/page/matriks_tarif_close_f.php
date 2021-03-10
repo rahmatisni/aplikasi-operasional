@@ -173,6 +173,7 @@ $arr_gerbang_id = array();
     // $arraygerbangid = array_values (array_unique($arr_gerbang_id));
     $jmlexit = array_values (array_unique($gerbang_id_count));
     $jmlentrance = array_values (array_unique($gerbang_asal_count));
+    
     $span = sizeof($jmlentrance);
     // var_dump($myArray);
 
@@ -215,9 +216,13 @@ $arr_gerbang_id = array();
                             <?php 
                                 if(count($GerbangOption)> 0)
                                 {
+
                                     foreach ($GerbangOption as $row) 
                                     {
-                                        echo '<option value='.$row->gerbang_id.'>'.ucfirst($row->gerbang_nama).' - ('.$row->jenis_gerbang.')'.'</option>';
+                                        // kode ruas
+                                        if ($row->jenis_gerbang != '2' && $row->ruas_id == '40') {
+                                            echo '<option value='.$row->gerbang_id.'>'.ucfirst($row->gerbang_nama).' - ('.$row->jenis_gerbang.')'.'</option>';
+                                        }                                   
                                     }
                                 } 
                                 else
@@ -274,7 +279,7 @@ $arr_gerbang_id = array();
                         </table>
                     </div>
                 </div>
-                <h1 style="text-align:center";>Daftar Tarif Gerbang Close CSJ</h1>
+                <h1 style="text-align:center";>Daftar Tarif Gerbang Close JKC</h1>
                 <div class="panel-body">
 
 
@@ -317,6 +322,7 @@ $arr_gerbang_id = array();
         <tbody>
 
         <?php
+        
     for ($row = 1; $row < sizeof($jmlexit)+1; $row++) { // first loop
         for ($col = 0; $col < sizeof($jmlentrance)+1; $col++) { //2nd loop
             if($row == 0 && $col == 0){

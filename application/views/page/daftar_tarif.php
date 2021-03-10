@@ -190,7 +190,7 @@ if (isset($_POST['myinput2'])) {
 
 								<div class="form-group">
 									<label for="exampleInputEmail1" id="asq">Asal Gerbang :</label>
-									<select class="form-control" id="asal_gerbang_update" name="asal_gerbang_update" required>
+									<select class="form-control" id="asal_gerbang_update" name="asal_gerbang_update">
 									</select>
 								</div>
 
@@ -945,7 +945,8 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 		$('#btnDaftarTarif').click(function() {
 			var selectedVal = $("#gerbang option:selected").text();
 			selectedVal = selectedVal.split('(').pop().split(')')[0]; // returns 'two'
-
+			$("#asal_gerbang_update").hide();
+			$("#asq").hide();
 			console.log('9');
 
 			if (selectedVal == 0 || selectedVal == 4) {
@@ -988,8 +989,7 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 				// document.getElementById('btnAddDaftarTarifClose').style.visibility = 'visible';
 
 			}
-			$("#asal_gerbang_update").hide();
-			$("#asq").hide();
+
 
 
 
