@@ -34,7 +34,7 @@ class Main extends MY_Controller
 	public function matriks_tarif_close()
 	{
 		$data['fullgerbang'] = $this->model->getfullgerbang();
-		$data['namanyagerbang'] = $this->model->getnamanyagerbang();
+		$data['namanyagerbang'] = $this->model->getnamanyagerbangmclose();
 		$data['fullgerbang3'] = $this->model->getmatriksclosefull();
 
 		$this->render_page('page/matriks_tarif_close', $data);

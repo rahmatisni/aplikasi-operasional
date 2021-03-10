@@ -110,6 +110,7 @@ class DaftarTarifCloseModel extends CI_Model {
                 'id_dasar_tarif'=>$data['dasar_tarif'],
                 'tarif_inv'=>'[MTN,JM-JANGER,MMS,BSD,JKC,CSJ,00000,00000,00000,00000]',
                 // 'bagi_hasil'=>'[MTN,JM-JANGER,MMS,BSD]'
+                // kode_ruas
                 'ruas_id'=>40,
             );
 
@@ -140,6 +141,7 @@ class DaftarTarifCloseModel extends CI_Model {
                 'id_dasar_tarif'=>$data['dasar_tarif'],
                 'tarif_inv'=>'[MTN,JM-JANGER,MMS,BSD,JKC,CSJ,00000,00000,00000,00000]',
                 // 'bagi_hasil'=>'[MTN,JM-JANGER,MMS,BSD]'
+                // kode_ruas
                 'ruas_id'=>40,
 
             );

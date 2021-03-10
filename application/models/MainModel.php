@@ -121,10 +121,12 @@ class MainModel extends CI_Model {
         $this->load->database();
 		$this->db->select('*');
 		$this->db->from('tbl_gerbang');
-		$this->db->where('status',1);
-		$this->db->where('jenis_Gerbang',1);
-		$this->db->or_where('jenis_Gerbang',3);
+		$jeniss = ['1','3'];
+		$this->db->where_in('jenis_Gerbang',$jeniss);
 		$this->db->where('ruas_id',40);
+		// kode ruas
+		$this->db->where('status',1);
+
 
 		// $this->db->where_in('jenis_gerbang',$jenis_gerbang);	
 
@@ -150,9 +152,10 @@ class MainModel extends CI_Model {
 			}
 			// $sql = "SELECT * FROM tbl_tarif_exit t1 WHERE tgl_berlaku = (SELECT max(tgl_berlaku) from tbl_tarif_exit WHERE gerbang_id = t1.gerbang_id) AND gerbang_id = $gerbang_id AND jenis NOT LIKE 'KHL'";
 			
-			$sql = "SELECT d.* FROM(SELECT asal_gerbang, Max(tgl_berlaku) as MaxDate FROM tbl_tarif_exit where gerbang_id = $gerbang_id AND jenis NOT LIKE ('KHL')GROUP BY asal_gerbang)r  INNER JOIN tbl_tarif_exit d on d.asal_gerbang = r.asal_gerbang and d.tgl_berlaku = r.MaxDate AND gerbang_id = $gerbang_id ORDER by r.asal_gerbang";
+			$sql = "SELECT d.* FROM (SELECT asal_gerbang, Max(tgl_berlaku) as MaxDate FROM tbl_tarif_exit where gerbang_id = $gerbang_id AND jenis NOT LIKE ('KHL')GROUP BY asal_gerbang) r  INNER JOIN tbl_tarif_exit d on d.asal_gerbang = r.asal_gerbang and d.tgl_berlaku = r.MaxDate AND gerbang_id = $gerbang_id ORDER by r.asal_gerbang";
+
 			$result = $conn->query($sql);
-			if ($result->num_rows > 0) {
+			if ($result) {
                 // output data of each row
 				while($row = $result->fetch_assoc()) {
 					// echo "Gerbang: " . $row["gerbang_id"]."<br>";
@@ -196,6 +199,18 @@ class MainModel extends CI_Model {
         $this->load->database();
 		$this->db->select('*');
 		$this->db->from('tbl_gerbang');
+		
+		$rs = $this->db->get();	  
+		return json_encode($rs->result());
+
+	}
+
+	public function getnamanyagerbangmclose()
+    {		
+        $this->load->database();
+		$this->db->select('*');
+		$this->db->from('tbl_gerbang');
+		// $this->db->where_in('jenis_gerbang',['1','2','4']);
 
 		$rs = $this->db->get();	  
 		return json_encode($rs->result());
@@ -228,6 +243,8 @@ class MainModel extends CI_Model {
 		$this->db->select('*');
 		$this->db->from('tbl_gerbang');
 		$this->db->where('status','1');
+		// kode ruas
+
 		// $this->db->where('ruas_id','40');		
 		
 		$rs = $this->db->get();	  

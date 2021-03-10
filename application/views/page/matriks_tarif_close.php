@@ -112,6 +112,7 @@ $elementCount  = count($someObject);
 
 $someObject2 = json_decode($namanyagerbang);
 $listdatagerbang = json_decode(json_encode($someObject2), true);
+// var_dump($listdatagerbang);
 
 // $jmlentrance = array_values (array_unique($arr_asal_gerbang));
 
@@ -173,8 +174,8 @@ $jmlentrance = array_values(array_unique($gerbang_asal_count));
 
 // print_r(sizeof($arraygerbangid));
 
-$span = sizeof($jmlentrance);
-// var_dump($myArray);
+$span = sizeof($jmlentrance)-3;
+// var_dump($jmlentrance);
 // var_dump($arr_gerbang_id);
 
 // var_dump($new_array);
@@ -224,18 +225,22 @@ $span = sizeof($jmlentrance);
 
 
                                     for ($i = 0; $i < sizeof($jmlentrance); $i++) { // first loop
-                                        echo '<th>';
+                                        // echo '<th>';
                                         for ($x = 0; $x < sizeof($listdatagerbang); $x++) { // first loop
                                             if ($jmlentrance[$i] != $listdatagerbang[$x]['gerbang_id']) {
                                                 // print_r($jmlexit[$i]);
                                                 // print_r($listdatagerbang[$i]['gerbang_id']);
                                             } else {
+                                                echo '<th>';
+
                                                 print_r($listdatagerbang[$x]['gerbang_nama']);
-                                                // print_r("-");
-                                                // print_r($listdatagerbang[$x]['gerbang_id']);
+                                                print_r("-");
+                                                print_r($listdatagerbang[$x]['gerbang_id']);
+                                                echo '</th>';
+
                                             }
                                         }
-                                        echo '</th>';
+                                        // echo '</th>';
                                     }
                                     ?>
 
@@ -245,7 +250,9 @@ $span = sizeof($jmlentrance);
 
                                 <?php
                                 for ($row = 1; $row < sizeof($jmlexit) + 1; $row++) { // first loop
+                                    // for ($col = 0; $col < sizeof($jmlentrance) + 1; $col++) { //2nd loop
                                     for ($col = 0; $col < sizeof($jmlentrance) + 1; $col++) { //2nd loop
+
                                         if ($row == 0 && $col == 0) {
                                             echo '<td> Asal Gerbang </td>';
                                             echo '<td> Golongan </td>';
@@ -273,8 +280,8 @@ $span = sizeof($jmlentrance);
                                                 if ($jmlexit[$row - 1] != $listdatagerbang[$i]['gerbang_id']) {
                                                 } else {
                                                     print_r($listdatagerbang[$i]['gerbang_nama']);
-                                                    // print_r("=");
-                                                    // print_r($listdatagerbang[$i]['gerbang_id']);
+                                                    print_r("=");
+                                                    print_r($listdatagerbang[$i]['gerbang_id']);
                                                 }
                                             }
 

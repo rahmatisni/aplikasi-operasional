@@ -1009,6 +1009,8 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 			var option = '';
 			var gerbang = $("#gerbang").val();
 			var url = base_url + '/main/showDasarTarifOption';
+			$("#asal_gerbang_update").hide();
+			$("#asq").hide();
 			if (selectedVal == 0 || selectedVal == 4) {
 				$('#gerbangmodal').find('option').remove().end();
 				$('#dasartarifmodal').find('option').remove().end();
@@ -1376,11 +1378,11 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 					$("#DaftarTarifModal").modal('show');
 					$("#asal_gerbang").hide();
 					$("#asal_gerbang_update").hide();
+					$("#asq").hide();
 
 					$("#jenis").hide();
 					$("#asd1").hide();
 					$("#asd2").hide();
-					$("#asq").hide();
 
 				}
 
