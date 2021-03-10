@@ -1003,7 +1003,7 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 		});
 
 		$('#btnAddDaftarTarif').click(function() {
-
+te
 			var selectedVal = $("#gerbang option:selected").text();
 			selectedVal = selectedVal.split('(').pop().split(')')[0]; // returns 'two'
 			var option = '';
@@ -1285,8 +1285,8 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 						},
 						dataType: "JSON",
 						success: function(data) {
-							//console.log(data);
-							//console.log(data[0].id_daftar_tarif);
+							// console.log(data);
+							console.log(data[0].id_daftar_tarif);
 							$.each(data, function(i, item) {
 
 								//console.log(data[i].id_dasar_tarif);
@@ -1295,7 +1295,7 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 									selected = "selected";
 								}
 
-								option += '<option value="' + data[i].id_dasar_tarif + '" ' + selected + '>' + data[i].dasar_tarif + '</option>'
+								option += '<option value="' + data[i].id_dasar_tarif + '" ' + selected + '>' + response[i].dasar_tarif + '</option>'
 
 															
 							});
