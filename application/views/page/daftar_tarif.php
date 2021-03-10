@@ -1003,7 +1003,7 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 		});
 
 		$('#btnAddDaftarTarif').click(function() {
-te
+
 			var selectedVal = $("#gerbang option:selected").text();
 			selectedVal = selectedVal.split('(').pop().split(')')[0]; // returns 'two'
 			var option = '';
