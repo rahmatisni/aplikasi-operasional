@@ -1069,7 +1069,7 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 						$.each(response, function(i, item) {
 
 							option += '<option value="' + response[i].id_dasar_tarif + '"  >' + response[i].dasar_tarif + '</option>'
-							// console.log(option);
+							console.log(option);
 							//console.log(response[i].dasar_tarif);
 						});
 					}
