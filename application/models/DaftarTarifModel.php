@@ -110,7 +110,7 @@ class DaftarTarifModel extends CI_Model {
                 'gerbang_id'=>$data['gerbang']=='default' ? '05' : $data['gerbang'],
                 'id_dasar_tarif'=>$data['dasar_tarif'],
                 'tarif_inv'=>'[JM000,AST00,00000,00000,00000,00000,00000,00000,00000,00000,00000]',
-                'bagi_hasil'=>'[MTN,JM-JANGER,MMS,BSD]'
+                'bagi_hasil'=>'[MTN,JM-JANGER,MMS,BSD,JKC,CSJ]'
             );
 
             $insert=$this->dbp->insert('tbl_tarif_open',$item);
@@ -135,7 +135,7 @@ class DaftarTarifModel extends CI_Model {
                 'gerbang_id'=>$data['gerbang']=='default' ? '05' : $data['gerbang'],
                 'id_dasar_tarif'=>$data['dasar_tarif'],
                 'tarif_inv'=>'[JM000,AST00,00000,00000,00000,00000,00000,00000,00000,00000,00000]',
-                'bagi_hasil'=>'[MTN,JM-JANGER,MMS,BSD]'
+                'bagi_hasil'=>'[MTN,JM-JANGER,MMS,BSD,JKC,CSJ]'
             );
 
         

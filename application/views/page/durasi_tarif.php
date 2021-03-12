@@ -9,7 +9,9 @@
                             <?php
                             if (count($GerbangOption) > 0) {
                                 foreach ($GerbangOption as $row) {
-                                    if (($row->jenis_gerbang == '1' or $row->jenis_gerbang == '3') and ($row->ruas_id == '40')){
+                                    // if (($row->jenis_gerbang == '1' or $row->jenis_gerbang == '3') and ($row->ruas_id == '40')){
+                                    if ($row->jenis_gerbang == '1' or $row->jenis_gerbang == '3'){
+
                                         echo '<option value=' . $row->gerbang_id . '>' . ucfirst($row->gerbang_nama) . ' - ' . $row->gerbang_id . '</option>';
                                     }
                                 }

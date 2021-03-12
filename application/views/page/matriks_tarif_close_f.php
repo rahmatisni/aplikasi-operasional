@@ -220,7 +220,9 @@ $arr_gerbang_id = array();
                                     foreach ($GerbangOption as $row) 
                                     {
                                         // kode ruas
-                                        if ($row->jenis_gerbang != '2' && $row->ruas_id == '40') {
+                                        // if ($row->jenis_gerbang != '2' && $row->ruas_id == '40') {
+                                        if ($row->jenis_gerbang != '2') {
+
                                             echo '<option value='.$row->gerbang_id.'>'.ucfirst($row->gerbang_nama).' - ('.$row->jenis_gerbang.')'.'</option>';
                                         }                                   
                                     }

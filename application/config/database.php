@@ -119,6 +119,51 @@ $db['01'] = array(
 	'save_queries' => TRUE
 );
 
+$db['05'] = array(
+	'dsn'	=> '',
+	'hostname' => '192.168.134.134',
+	'username' => 'mtn',
+	'password' => 'mtn',
+	'database' => 'mtn_lattol_05',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+$db['07'] = array(
+	'dsn'	=> '',
+	'hostname' => '192.168.134.134',
+	'username' => 'mtn',
+	'password' => 'mtn',
+	'database' => 'mtn_lattol_07',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+
 $db['32'] = array(
 	'dsn'	=> '',
 	'hostname' => '192.168.134.135',

@@ -111,7 +111,7 @@ class DaftarTarifCloseModel extends CI_Model {
                 'tarif_inv'=>'[MTN,JM-JANGER,MMS,BSD,JKC,CSJ,00000,00000,00000,00000]',
                 // 'bagi_hasil'=>'[MTN,JM-JANGER,MMS,BSD]'
                 // kode_ruas
-                'ruas_id'=>40,
+                // 'ruas_id'=>40,
             );
 
             $insert=$this->dbp->insert('tbl_tarif_exit',$item);
@@ -142,7 +142,7 @@ class DaftarTarifCloseModel extends CI_Model {
                 'tarif_inv'=>'[MTN,JM-JANGER,MMS,BSD,JKC,CSJ,00000,00000,00000,00000]',
                 // 'bagi_hasil'=>'[MTN,JM-JANGER,MMS,BSD]'
                 // kode_ruas
-                'ruas_id'=>40,
+                // 'ruas_id'=>40,
 
             );
 
