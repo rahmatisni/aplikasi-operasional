@@ -283,38 +283,38 @@ $span = sizeof($jmlentrance);
                                             echo '<td > Golongan 1</td>';
                                         } else {
                                             // $p = $col * $row; //computing values
-                                            if ($jmlexit[$row - 1] == $jmlentrance[$col - 1]) {
+                                            // if ($jmlexit[$row - 1] == $jmlentrance[$col - 1]) {
 
-                                                echo '<td style="background-color:#AC2929">';
-                                                echo '<a href="#" class="passingID" data-gerbang="' . ($new_array[$i]['gerbang_nama']) . '"';
+                                            //     echo '<td style="background-color:#AC2929">';
+                                            //     echo '<a href="#" class="passingID" data-gerbang="' . ($new_array[$i]['gerbang_nama']) . '"';
 
-                                                $asal_trx = array();
-                                                // var_dump($namanyagerbang);
-                                                for ($x = 0; $x < sizeof($namanyagerbang); $x++) {
-                                                    // print_r($namanyagerbang[$x]['gerbang_id'].'//');
-                                                    if ($new_array[$i]['asal_gerbang'] == $namanyagerbang[$x]['gerbang_id']) {
-                                                        $asal_gerbang_namas = $namanyagerbang[$x]['gerbang_nama'];
+                                            //     $asal_trx = array();
+                                            //     // var_dump($namanyagerbang);
+                                            //     for ($x = 0; $x < sizeof($namanyagerbang); $x++) {
+                                            //         // print_r($namanyagerbang[$x]['gerbang_id'].'//');
+                                            //         if ($new_array[$i]['asal_gerbang'] == $namanyagerbang[$x]['gerbang_id']) {
+                                            //             $asal_gerbang_namas = $namanyagerbang[$x]['gerbang_nama'];
 
-                                                        $asal_trx[] = array("asal_gerbang_nama" => "$asal_gerbang_namas");
-                                                    } else {
-                                                    }
-                                                }
-                                                echo 'data-gerbang-asal="' . ($asal_trx[0]['asal_gerbang_nama']) . '"';
-                                                echo 'data-investor="' . ($new_array[$i]['tarif_inv']) . '"';
-                                                echo 'data-gol1d="' . ($new_array[$i]['Gol1_d']) . '"';
-                                                echo 'data-gol2d="' . ($new_array[$i]['Gol2_d']) . '"';
-                                                echo 'data-gol3d="' . ($new_array[$i]['Gol3_d']) . '"';
-                                                echo 'data-gol4d="' . ($new_array[$i]['Gol4_d']) . '"';
-                                                echo 'data-gol5d="' . ($new_array[$i]['Gol5_d']) . '"';
-                                                echo '>';
-                                                $hasil_rupiah = "Rp " . number_format($myArray[$i]['Gol1'], 2, ',', '.');
-                                                print_r($hasil_rupiah);
-                                                // print_r($i);
+                                            //             $asal_trx[] = array("asal_gerbang_nama" => "$asal_gerbang_namas");
+                                            //         } else {
+                                            //         }
+                                            //     }
+                                            //     echo 'data-gerbang-asal="' . ($asal_trx[0]['asal_gerbang_nama']) . '"';
+                                            //     echo 'data-investor="' . ($new_array[$i]['tarif_inv']) . '"';
+                                            //     echo 'data-gol1d="' . ($new_array[$i]['Gol1_d']) . '"';
+                                            //     echo 'data-gol2d="' . ($new_array[$i]['Gol2_d']) . '"';
+                                            //     echo 'data-gol3d="' . ($new_array[$i]['Gol3_d']) . '"';
+                                            //     echo 'data-gol4d="' . ($new_array[$i]['Gol4_d']) . '"';
+                                            //     echo 'data-gol5d="' . ($new_array[$i]['Gol5_d']) . '"';
+                                            //     echo '>';
+                                            //     $hasil_rupiah = "Rp " . number_format($myArray[$i]['Gol1'], 2, ',', '.');
+                                            //     print_r($hasil_rupiah);
+                                            //     // print_r($i);
 
-                                                // print_r($new_array[0]['tarif_inv']);
-                                                echo '</a>';
-                                                echo '</td>';
-                                            } else {
+                                            //     // print_r($new_array[0]['tarif_inv']);
+                                            //     echo '</a>';
+                                            //     echo '</td>';
+                                            // } else {
 
                                                 for ($i = 0; $i < sizeof($myArray); $i++) {
                                                     // print_r("z");
@@ -363,7 +363,7 @@ $span = sizeof($jmlentrance);
                                                         break;
                                                     }
                                                 }
-                                            }
+                                            // }
                                         }
                                     }
                                     echo '</tr>';
@@ -377,39 +377,39 @@ $span = sizeof($jmlentrance);
                                             // echo '<td>';
                                             // print_r("ags");
                                             // echo '</td>';  
-                                            if ($jmlexit[$row - 1] == $jmlentrance[$col - 1]) {
-                                                echo '<td style="background-color:#AC2929">';
-                                                echo '<a href="#" class="passingID" data-gerbang="' . ($new_array[$i]['gerbang_nama']) . '"';
+                                            // if ($jmlexit[$row - 1] == $jmlentrance[$col - 1]) {
+                                            //     echo '<td style="background-color:#AC2929">';
+                                            //     echo '<a href="#" class="passingID" data-gerbang="' . ($new_array[$i]['gerbang_nama']) . '"';
 
-                                                $asal_trx = array();
-                                                // var_dump($namanyagerbang);
-                                                for ($x = 0; $x < sizeof($namanyagerbang); $x++) {
-                                                    // print_r($namanyagerbang[$x]['gerbang_id'].'//');
-                                                    if ($new_array[$i]['asal_gerbang'] == $namanyagerbang[$x]['gerbang_id']) {
-                                                        $asal_gerbang_namas = $namanyagerbang[$x]['gerbang_nama'];
+                                            //     $asal_trx = array();
+                                            //     // var_dump($namanyagerbang);
+                                            //     for ($x = 0; $x < sizeof($namanyagerbang); $x++) {
+                                            //         // print_r($namanyagerbang[$x]['gerbang_id'].'//');
+                                            //         if ($new_array[$i]['asal_gerbang'] == $namanyagerbang[$x]['gerbang_id']) {
+                                            //             $asal_gerbang_namas = $namanyagerbang[$x]['gerbang_nama'];
 
-                                                        $asal_trx[] = array("asal_gerbang_nama" => "$asal_gerbang_namas");
-                                                    } else {
-                                                    }
-                                                }
-                                                echo 'data-gerbang-asal="' . ($asal_trx[0]['asal_gerbang_nama']) . '"';
-                                                echo 'data-investor="' . ($new_array[$i]['tarif_inv']) . '"';
-                                                echo 'data-gol1d="' . ($new_array[$i]['Gol1_d']) . '"';
-                                                echo 'data-gol2d="' . ($new_array[$i]['Gol2_d']) . '"';
-                                                echo 'data-gol3d="' . ($new_array[$i]['Gol3_d']) . '"';
-                                                echo 'data-gol4d="' . ($new_array[$i]['Gol4_d']) . '"';
-                                                echo 'data-gol5d="' . ($new_array[$i]['Gol5_d']) . '"';
-                                                echo '>';
-                                                $hasil_rupiah = "Rp " . number_format($myArray[$i]['Gol1'], 2, ',', '.');
-                                                print_r($hasil_rupiah);
-                                                // print_r($i);
+                                            //             $asal_trx[] = array("asal_gerbang_nama" => "$asal_gerbang_namas");
+                                            //         } else {
+                                            //         }
+                                            //     }
+                                            //     echo 'data-gerbang-asal="' . ($asal_trx[0]['asal_gerbang_nama']) . '"';
+                                            //     echo 'data-investor="' . ($new_array[$i]['tarif_inv']) . '"';
+                                            //     echo 'data-gol1d="' . ($new_array[$i]['Gol1_d']) . '"';
+                                            //     echo 'data-gol2d="' . ($new_array[$i]['Gol2_d']) . '"';
+                                            //     echo 'data-gol3d="' . ($new_array[$i]['Gol3_d']) . '"';
+                                            //     echo 'data-gol4d="' . ($new_array[$i]['Gol4_d']) . '"';
+                                            //     echo 'data-gol5d="' . ($new_array[$i]['Gol5_d']) . '"';
+                                            //     echo '>';
+                                            //     $hasil_rupiah = "Rp " . number_format($myArray[$i]['Gol1'], 2, ',', '.');
+                                            //     print_r($hasil_rupiah);
+                                            //     // print_r($i);
 
-                                                // print_r($new_array[0]['tarif_inv']);
-                                                echo '</a>';
+                                            //     // print_r($new_array[0]['tarif_inv']);
+                                            //     echo '</a>';
 
-                                                echo '</a>';
-                                                echo '</td>';
-                                            } else {
+                                            //     echo '</a>';
+                                            //     echo '</td>';
+                                            // } else {
                                                 for ($i = 0; $i < sizeof($myArray); $i++) {
                                                     // print_r("z");
                                                     if ($jmlexit[$row - 1] != $myArray[$i]['gerbang_id'] || $jmlentrance[$col - 1] != $myArray[$i]['asal_gerbang']) {
@@ -461,7 +461,7 @@ $span = sizeof($jmlentrance);
                                                         break;
                                                     }
                                                 }
-                                            }
+                                            // }
                                         }
 
                                         echo '</tr>';

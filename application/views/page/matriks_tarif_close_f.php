@@ -378,15 +378,16 @@ $arr_gerbang_id = array();
 
             else {
                 // $p = $col * $row; //computing values
-                if ($jmlexit[$row-1] == $jmlentrance[$col-1]) {
+
+                // if ($jmlexit[$row-1] == $jmlentrance[$col-1]) {
                 
-                    echo '<td style="background-color:#AC2929">';
-                    // echo 'AGS';
-                    $hasil_rupiah = "Rp " . number_format($myArray[$i+1]['Gol1'],2,',','.');
-                    print_r($hasil_rupiah);
-                    echo '</td>';  
-                }
-                else {
+                //     echo '<td style="background-color:#AC2929">';
+                //     echo 'AGS';
+                //     $hasil_rupiah = "Rp " . number_format($myArray[$i]['Gol1'],2,',','.');
+                //     print_r($hasil_rupiah);
+                //     echo '</td>';  
+                // }
+                // else {
 
                     for ($i=0; $i<sizeof($myArray); $i++){
                         // print_r("z");
@@ -442,7 +443,7 @@ $arr_gerbang_id = array();
                         }
                     }
                         
-                }
+                // }
             }
         }
         echo '</tr>';
@@ -456,25 +457,25 @@ $arr_gerbang_id = array();
                 // echo '<td>';
                 // print_r("ags");
                 // echo '</td>';  
-                if ($jmlexit[$row-1] == $jmlentrance[$col-1]) {
-                    echo '<td style="background-color:#AC2929">';
-                    // echo '<a href="#" class="passingID" data-gerbang="'.($new_array[$i]['gerbang_nama']).'"';
+                // if ($jmlexit[$row-1] == $jmlentrance[$col-1]) {
+                //     echo '<td style="background-color:#AC2929">';
+                //     // echo '<a href="#" class="passingID" data-gerbang="'.($new_array[$i]['gerbang_nama']).'"';
 
-                    // echo 'data-investor="'.($new_array[$i]['tarif_inv']).'"';
-                    // echo 'data-gol1d="'.($new_array[$i]['Gol1_d']).'"';  
-                    // echo 'data-gol2d="'.($new_array[$i]['Gol2_d']).'"';  
-                    // echo 'data-gol3d="'.($new_array[$i]['Gol3_d']).'"';  
-                    // echo 'data-gol4d="'.($new_array[$i]['Gol4_d']).'"';  
-                    // echo 'data-gol5d="'.($new_array[$i]['Gol5_d']).'"';  
-                    // echo '>';
-                    $hasil_rupiah = "Rp " . number_format($myArray[$i+1]['Gol'.$q],2,',','.');
-                    print_r($hasil_rupiah);
-                    // echo 'AGS';
+                //     // echo 'data-investor="'.($new_array[$i]['tarif_inv']).'"';
+                //     // echo 'data-gol1d="'.($new_array[$i]['Gol1_d']).'"';  
+                //     // echo 'data-gol2d="'.($new_array[$i]['Gol2_d']).'"';  
+                //     // echo 'data-gol3d="'.($new_array[$i]['Gol3_d']).'"';  
+                //     // echo 'data-gol4d="'.($new_array[$i]['Gol4_d']).'"';  
+                //     // echo 'data-gol5d="'.($new_array[$i]['Gol5_d']).'"';  
+                //     // echo '>';
+                //     $hasil_rupiah = "Rp " . number_format($myArray[$i+1]['Gol'.$q],2,',','.');
+                //     print_r($hasil_rupiah);
+                //     // echo 'AGS';
 
-                    echo '</a>';
-                    echo '</td>';  
-                }
-                else {
+                //     echo '</a>';
+                //     echo '</td>';  
+                // }
+                // else {
                     for ($i=0; $i<sizeof($myArray); $i++){
                         // print_r("z");
                         if ($jmlexit[$row-1] != $myArray[$i]['gerbang_id'] || $jmlentrance[$col-1] != $myArray[$i]['asal_gerbang'])
@@ -532,7 +533,7 @@ $arr_gerbang_id = array();
                         }
                     }
                         
-                }
+                // }
                 
             }
          

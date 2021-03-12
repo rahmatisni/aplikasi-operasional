@@ -1011,14 +1011,15 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 			var url = base_url + '/main/showDasarTarifOption';
 			$("#asal_gerbang_update").hide();
 			$("#asq").hide();
+			$("#form-tambah-edit-DaftarTarif").trigger('reset');
+
 			if (selectedVal == 0 || selectedVal == 4) {
 				$('#gerbangmodal').find('option').remove().end();
 				$('#dasartarifmodal').find('option').remove().end();
-				$("#form-tambah-edit-DaftarTarif").trigger('reset');
 
 				$.ajax({
 					url: url,
-					async: false,
+					// async: false,
 					method: "POST",
 					data: {
 						gerbang: gerbang
@@ -1029,9 +1030,12 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 
 						$.each(response, function(i, item) {
 
-							option += '<option value="' + response[i].id_dasar_tarif + '"  >' + response[i].dasar_tarif + '</option>'
+							$('#dasartarifmodal').append('<option value ='+response[i].id_dasar_tarif+'>'+response[i].dasar_tarif+'</option>')
+
+
+							// option += '<option value="' + response[i].id_dasar_tarif + '"  >' + response[i].dasar_tarif + '</option>'
 							//console.log(option);
-							//console.log(response[i].dasar_tarif);
+							console.log(response[i].dasar_tarif);
 						});
 					}
 
@@ -1043,7 +1047,7 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 				var optionValue = $("#gerbang option:selected").val();
 				var optionText = $("#gerbang option:selected").text();
 				$('#gerbangmodal').append(`<option value="${optionValue}"> ${optionText}</option>`);
-				$('#dasartarifmodal').append(option);
+				// $('#dasartarifmodal').append(option);
 				$("#DaftarTarif-modal-tittle").html('Tambah Tarif');
 				$("#DaftarTarifModal").modal('show');
 				$("#asal_gerbang").hide();
@@ -1068,9 +1072,13 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 
 						$.each(response, function(i, item) {
 
-							option += '<option value="' + response[i].id_dasar_tarif + '"  >' + response[i].dasar_tarif + '</option>'
-							console.log(option);
+							// option += '<option value="' + response[i].id_dasar_tarif + '"  >' + response[i].dasar_tarif + '</option>'
+							// console.log(option);
 							//console.log(response[i].dasar_tarif);
+							$('#dasartarifmodal').append('<option value ='+response[i].id_dasar_tarif+'>'+response[i].dasar_tarif+'</option>')
+
+							console.log(response[i].dasar_tarif);
+
 						});
 					}
 
@@ -1087,7 +1095,7 @@ var obj = <?php echo json_encode($GerbangOption); ?>;
 				var optionValue = $("#gerbang option:selected").val();
 				var optionText = $("#gerbang option:selected").text();
 				$('#gerbangmodal').append(`<option value="${optionValue}"> ${optionText}</option>`);
-				$('#dasartarifmodal').append(option);
+				// $('#dasartarifmodal').append(option);
 				$("#DaftarTarif-modal-tittle").html('Tambah Tarif');
 				$("#DaftarTarifModal").modal('show');
 				$("#asal_gerbang").show();
